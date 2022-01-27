@@ -11,7 +11,7 @@
 |
 */
 
-use App\Http\Controllers\API\CourseController;
+use App\Http\Controllers\CourseController;
 use App\Http\Controllers\DownloadController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InstructorController;
