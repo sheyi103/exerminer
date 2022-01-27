@@ -11,7 +11,7 @@
 |
 */
 
-use App\Http\Controllers\CourseController;
+use App\Http\Controllers\API\CourseController;
 use App\Http\Controllers\DownloadController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InstructorController;
@@ -21,7 +21,7 @@ use App\Http\Controllers\UploadController;
 Auth::routes();
 
 Route::get('/', HomeController::class)->name('home');
-Route::get('/courses/{course:slug}', 'CourseController@show')->name('course.show');
+Route::get('/courses/{course:slug}', [CourseController::class,'show'])->name('course.show');
 
 Route::group(['middleware' => ['auth']], function(){
 
